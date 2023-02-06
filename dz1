@@ -1,0 +1,78 @@
+#====== 1
+
+def getLongerString (stringA, stringB):
+    if len(stringA)>len(stringB):
+        print('Фраза 1 длиннее фразы 2')
+    elif len(stringA)<len(stringB):
+        print('Фраза 2 длиннее фразы 1')
+    else:
+        print('Фразы равной длины')
+
+
+#----- 2
+
+def checkYear(year):
+    if year%4==0:
+        print('Високосный год')
+    else:
+        print('Обычный год')
+
+#------ 3
+
+def getZodZnk(day, month):
+    month = month.lower()
+    if (day>=21 and month=='март') or (day<=20 and month=='апрель'):
+        print('ваш знак зодиака: овен')
+    elif (day>=21 and month=='апрель') or (day<=21 and month=='май'):
+        print("ваш знак зодиака: телец")
+    elif (day>=22 and month=='май') or (day<=21 and month=='июнь'):
+        print("ваш знак зодиака: близнецы")
+    elif (day>=22 and month=='июнь') or (day<=22 and month=='июль'):
+        print("ваш знак зодиака: рак")
+    elif (day>=23 and month=='июль') or (day<=23 and month=='август'):
+        print("ваш знак зодиака: лев")
+    elif (day>=24 and month=='август') or (day<=22 and month=='сентябрь'):
+        print("ваш знак зодиака: дева")
+    elif (day>=23 and month=='сентябрь') or (day<=22 and month=='октярь'):
+        print("ваш знак зодиака: весы")
+    elif (day>=23 and month=='октябрь') or (day<22 and month=='ноябрь'):
+        print("ваш знак зодиака: скорпион")
+    elif (day>=22 and month=='ноябрь') or (day<=21 and month=='декабрь'):
+        print("ваш знак зодиака: стрелец")
+    elif (day>=22 and month=='декабрь') or (day<=20 and month=='январь'):
+        print("ваш знак зодиака: козерог")
+    elif (day>=21 and month=='январь') or (day<=19 and month=='февраль'):
+        print("ваш знак зодиака: водолей")
+    elif (day>=20 and month=='февраль') or (day<=20 and month=='март'):
+        print("ваш знак зодиака: рыбы")
+
+#------ 4
+
+def checkBox(width, length, height):
+    if width<=15 and length<=15 and height<=15:
+        print('коробка №1')
+    elif width>200 or length>200 or height>200:
+        print('коробка для лыж')
+    elif width>15 and width<50 or length>15 and length<50 or height>15 and height<50:
+        print('коробка №2')
+    else:
+        print('коробка №3')
+
+
+#-----5
+
+def getHapiness(num):
+    num1=0
+    num2=0
+    num=str(num)
+    for i in range (len(num)//2):
+        num1+=int(num[i])
+    for j in range(len(num)//2, len(num)):
+        num2+=int(num[j])
+    if num1==num2:
+        print('Счастливый билет')
+    else:
+        print('Несчастливый билет')
+
+
+
